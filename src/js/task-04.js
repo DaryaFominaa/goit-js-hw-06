@@ -3,38 +3,38 @@
 // Оновлюй інтерфейс новим значенням змінної counterValue
 
 const counterValue = {
-    value: 0,
-    decrement (){
-        this.value -= 1;
-    },
-    increment (){
-        this.value += 1;
-    }
-}
+  value: 0,
+  decrement() {
+    this.value -= 1;
+  },
+  increment() {
+    this.value += 1;
+  },
+};
 
-
-const decrementButton = document.querySelector('button[data-action="decrement"]');
-const incrementButton = document.querySelector('button[data-action="increment"]');
-const valueEl = document.querySelector('#value');
+const decrementButton = document.querySelector(
+  'button[data-action="decrement"]'
+);
+const incrementButton = document.querySelector(
+  'button[data-action="increment"]'
+);
+const valueEl = document.querySelector("#value");
 
 console.log(decrementButton);
 console.log(incrementButton);
 console.log(valueEl);
 
+decrementButton.addEventListener("click", function () {
+  console.log("click on decr");
+  counterValue.decrement();
+  console.log(counterValue);
 
-decrementButton.addEventListener('click', function () {
-    console.log('click on decr');
-    counterValue.decrement();
-    console.log(counterValue);
-
-    valueEl.textContent = counterValue.value;
+  valueEl.textContent = counterValue.value;
 });
 
-
-incrementButton.addEventListener('click', function () {
-    console.log('click on incr');
- counterValue.increment();
-    console.log(counterValue);
-    valueEl.textContent = counterValue.value;
+incrementButton.addEventListener("click", function () {
+  console.log("click on incr");
+  counterValue.increment();
+  console.log(counterValue);
+  valueEl.textContent = counterValue.value;
 });
-

@@ -16,25 +16,17 @@
 // Category: Technologies
 // Elements: 5
 
+const liItemEl = document.querySelectorAll(".item");
+console.log(`Number of categories:`, document.querySelectorAll(".item").length);
 
-const liItemEl = document.querySelector("li.item");
-console.log('Number of categories:', liItemEl.length);
+// АБО-
+// const liItemEl = document.querySelector("#categories");
+// console.log('Number of categories:', liItemEl.children.length);
 
+const titlesEl = document.querySelectorAll(".item");
+// console.log(titlesEl);
 
-const headingEl = liItemEl.querySelectorAll('.item')
-
-// for (let i = 0; i < liItemEl.length; i += 1) { 
-//     console.log(`Category:`liItemEl[i].querySelector('h2'));
-// };
-
-
-
-const textEl = document.querySelector('h2');
-console.log('Category:', textEl.textContent);
-
-// const nameEl = textEl.querySelector('li');
-// console.log(nameEl);
-
-
-const liItemElll = document.querySelectorAll("li.item");
-console.log(liItemElll.children);
+for (const title of titlesEl) {
+  console.log(`Category:`, title.firstElementChild.textContent);
+  console.log(`Elements:`, title.lastElementChild.children.length);
+}
