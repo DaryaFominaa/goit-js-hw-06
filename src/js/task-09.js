@@ -14,3 +14,4 @@ function onClickChangeColor() {
   bodyEl.style.backgroundColor = getRandomHexColor();
   colorSpanEl.textContent = bodyEl.style.backgroundColor;
 }
+// console.log(getRandomHexColor())
