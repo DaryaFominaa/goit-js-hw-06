@@ -23,6 +23,5 @@ for (let i = 0; i < ingredients.length; i += 1) {
   li.classList.add("item");
   console.log(li);
   arr.push(li);
-
-  list.append(li);
 }
+list.append(...arr);

@@ -5,7 +5,7 @@ const textEl = document.querySelector("#text");
 // console.log(textEl)
 inputEl.addEventListener("input", onChangeSize);
 
-function onChangeSize() {
-  textEl.style.fontSize = `${Number(inputEl.value)}px`;
+function onChangeSize(event) {
+  // console.log(event.currentTarget.value)
+  textEl.style.fontSize = `${Number(event.currentTarget.value)}px`;
 }
-console.log(inputEl.value);

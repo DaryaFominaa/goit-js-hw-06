@@ -7,8 +7,20 @@ console.log(spanEl);
 
 inputEl.addEventListener("input", inputHandler);
 
+// function inputHandler(event) {
+//   console.log(event.currentTarget.value);
+//   spanEl.textContent = event.currentTarget.value;
+//   console.log(spanEl.textContent);
+// }
+
 function inputHandler(event) {
   console.log(event.currentTarget.value);
-  spanEl.textContent = event.currentTarget.value;
+
+  if (event.currentTarget.value.length > 0) {
+    spanEl.textContent = event.currentTarget.value;
+  } else {
+    spanEl.textContent = `Anonymous`;
+  }
+
   console.log(spanEl);
 }
